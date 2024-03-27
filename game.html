@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="app.css" />
-    <link rel="stylesheet" href="game.css" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -74,10 +73,10 @@
         <!-- countdown timer -->
         <div class="w-full flex justify-end">
           <div
-            class="w-2/5 clock flex flex-row justify-end bg-[#FFA500] rounded-lg text-2xl px-16 py-5 me-5 mb-5"
+            class="mr-5 hover:cursor-pointer w-[10%] flex justify-center bg-[#FFA500] rounded-lg text-2xl py-5"
             id="clock1"
           >
-            <div id="dk" class="text-white">00</div>
+            <div id="dk" class="text-white">20:</div>
             <div id="sn" class="text-white">00</div>
           </div>
         </div>
@@ -111,7 +110,7 @@
           <p class="text" data-number="3">Choice4</p>
         </div>
 
-        <div class="btns flex w-full flex justify-between">
+        <div class="btns flex w-full flex justify-between ml-5">
           <button
             id="prev"
             type="button"
