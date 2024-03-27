@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full m-0 p-0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+        :root {
+          background-color: #faebd7;
+          font-size: 62.5%;
+        }
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          color: #333;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+          margin-bottom: 1rem;
+        }
+
+        a:hover {
+          cursor: pointer;
+          box-shadow: 0 0.3rem 0.2rem 0 #800080;
+          transform: translateY(-0.1rem);
+          transition: transform 150ms ease;
+        }
+      }
+    </style>
+  </head>
+  <body class="h-full">
+    <div class="h-full flex justify-center">
+      <div
+        class="flex justify-center items-center flex-col w-full lg:w-2/3 h-full"
+      >
+        <h1 class="text-[#800080] mb-20 text-8xl font-bold">Quick Quiz</h1>
+        <a
+          href="/game.html"
+          class="text-4xl w-80 text-center border-2 border-solid border-[#800080] bg-white mb-8 p-5 text-[#FFA500] font-semibold"
+          >Play Game</a
+        >
+        <a
+          href="/highScore"
+          class="text-4xl w-80 text-center border-2 border-solid border-[#800080] bg-white mb-8 p-5 text-[#FFA500] font-semibold"
+          >High Score</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

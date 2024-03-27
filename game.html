@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="game.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+        :root {
+          background-color: #faebd7;
+          font-size: 62.5%;
+        }
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          color: #333;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+          margin-bottom: 1rem;
+        }
+        h1 {
+          font-size: 2.4rem;
+        }
+        h1 > span {
+          font-size: 4.2rem;
+          font-weight: 500;
+        }
+        h2 {
+          font-size: 4.2rem;
+          margin-bottom: 4rem;
+          font-weight: 700;
+        }
+        h3,
+        p {
+          font-size: 2.8rem;
+          font-weight: 500;
+        }
+
+        .testS:hover {
+          cursor: pointer;
+          box-shadow: 0 0.3rem 0.2rem 0 #b266b2;
+          transform: translateY(-0.1rem);
+          transition: transform 150ms ease;
+        }
+      }
+    </style>
+  </head>
+  <body class="h-full flex justify-center">
+    <div class="h-full flex items-center">
+      <div id="game" class="">
+        <!-- countdown timer -->
+        <div class="w-full flex justify-end">
+          <div
+            class="w-2/5 clock flex flex-row justify-end bg-[#FFA500] rounded-lg text-2xl px-16 py-5 me-5 mb-5"
+            id="clock1"
+          >
+            <div id="dk" class="text-white">00</div>
+            <div id="sn" class="text-white">00</div>
+          </div>
+        </div>
+
+        <h2 id="question">What is the answer to this questions?</h2>
+
+        <div
+          class="Choice testS flex space-x-10 items-center border-2 border-solid border-[#B266B2] bg-white mb-8 text-[#FFA500] font-semibold"
+        >
+          <p class="bg-[#BF7FBF] p-14">A</p>
+          <p class="text" data-number="0">Choice1</p>
+        </div>
+
+        <div
+          class="Choice testS flex space-x-10 items-center border-2 border-solid border-[#B266B2] bg-white mb-8 text-[#FFA500] font-semibold"
+        >
+          <p class="bg-[#BF7FBF] p-14">B</p>
+          <p class="text" data-number="1">Choice2</p>
+        </div>
+
+        <div
+          class="Choice testS flex space-x-10 items-center border-2 border-solid border-[#B266B2] bg-white mb-8 text-[#FFA500] font-semibold"
+        >
+          <p class="bg-[#BF7FBF] p-14">C</p>
+          <p class="text" data-number="2">Choice3</p>
+        </div>
+        <div
+          class="Choice testS flex space-x-10 items-center border-2 border-solid border-[#B266B2] bg-white mb-8 text-[#FFA500] font-semibold"
+        >
+          <p class="bg-[#BF7FBF] p-14">D</p>
+          <p class="text" data-number="3">Choice4</p>
+        </div>
+
+        <div class="btns flex w-full flex justify-between">
+          <button
+            id="prev"
+            type="button"
+            class="text-white bg-[#FFA500] hover:bg-[#E59400] font-medium rounded-lg text-2xl px-16 py-5 me-5 mb-5"
+          >
+            Prev
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="game.js"></script>
+  <script src="timer.js"></script>
+</html>
