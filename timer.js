@@ -1,4 +1,4 @@
-let countDate = 15;
+let countDate = 10;
 let dk = document.getElementById("dk");
 let sn = document.getElementById("sn");
 let homePageLink = document.querySelector("#homePage");
